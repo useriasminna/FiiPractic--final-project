@@ -496,7 +496,6 @@ a.toggle-nav {
   .toggle-nav:hover,
   .toggle-nav.active {
     text-decoration: none;
-    color: #66a992;
   }
 
   a.toggle-nav {
