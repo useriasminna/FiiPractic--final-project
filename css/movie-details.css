@@ -1,101 +1,97 @@
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 
-  body {
-   margin: 0;
-   font-family: 'Roboto', sans-serif;
-   background-color: rgba(248, 248, 255, 0.925);
-  }
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(248, 248, 255, 0.925);
+}
 
-  #bodydetails{ 
-    display: block;
-    width: 84%;
-    margin-left: 129px;
-    background-color: #ffff;
-    padding: 27px;
-    margin-top: 145px;
-    border: 1px solid rgb(243, 239, 239);
-    box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.2), 0px 6px 20px 0px rgba(0,0,0,0.19);
+input{
+  font-size: 15px;
+}
 
-   }
-   .detailcover{
-    width:215px;
-    height:300px;
-    grid-row: span 4;
-    align-self: center;
-    box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.2), 0px 6px 20px 0px rgba(0,0,0,0.19);
-   }
-   .detailcard{
-    width: 97%;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 75px 75px 75px 75px;
-    height: 300px;
-    margin-left: 22px;
-    margin-top: 20px;
-   }
-   .detailtitle{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
-    font-weight: bold;
-    text-decoration: none;
-    margin: 5px 0px 15px 20px;
-    color: #000000;
-   }
-   .detaildirector{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    align-self: center;
-    justify-self:flex-start ;
-    align-content: flex-start;
-   }
-   .detailslabel {
-    font-weight: bold;
-    font-size: 18px;
-   }
-   
-   .detailgenre{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    align-self: center;
-    justify-self:flex-start 
-   }
-   .detailduration{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    align-self: center;
-    justify-self:flex-start 
-   }
-   .detailrelease{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    align-self: center;
-    justify-self:flex-start
-   }
-   .description{
-    margin: 22px 0px 25px 22px;
-   }
-   h2{
-    font-weight: bold;
-    font-size: 18px;
-    margin:22px 0px  0px 22px; 
-   }
-   .movietrailer{
-       width:505px;
-       height:285px;
-       margin:22px 0px 15px 22px;
-   }
-   .break{
-       border-style: ridge;
-   }
+.detailcover {
+  margin: 0px;
+}
+
+.detailcard {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 80px 80px 80px 80px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.detailtitle {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px 0px 15px 20px;
+  color: #000000;
+}
+
+.detaildirector {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  align-self: flex-end;
+  justify-self: flex-start;
+}
+
+.detailslabel {
+  font-weight: bold;
+}
+
+.detailgenre {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  align-self: flex-end;
+  justify-self: flex-start
+}
+
+.detailduration {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  align-self: flex-end;
+  justify-self: flex-start
+}
+
+.detailrelease {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  align-self: flex-end;
+  justify-self: flex-start
+}
+
+.description {
+  margin: 22px 0px 25px 22px;
+}
+
+h2 {
+  font-weight: bold;
+  margin: 22px 0px 0px 22px;
+}
+
+.movietrailer {
+  width: 100%;
+  height: 40vh;
+  margin: 22px 0px 15px 22px;
+}
+
+.break {
+  border-style: ridge;
+}
+
 /* 
      .castdiv{
     display: grid;
@@ -125,229 +121,235 @@
     grid-row-end: 1;
    }  */
 
-   @media screen and (max-width: 780px)
-   {
-    body{
-        background-color: #fff;
-      }
-    .headercontainer{
-      display: grid;
-      grid-template-columns: 40% 20% 40% ;
-      grid-template-rows: 0px 40px;
-      height:40px ;
-      padding: 0px;
-      position: fixed;
-      top: 0%;
-      margin-bottom: 30px;
-      z-index: 1;
-    }
-    
-    
-    .topnav{
-      position: relative;
-		  display: inline-block;
-    }
-    .topnav ul.active {
-      display: none;
-    }
-    .topnav ul {
-      width: 200px;;
-      position: fixed;;
-      top:31px;
-      left:6px;
-      padding:15px ;
-      box-shadow:0px 1px 1px rgba(0,0,0,0.15);
-      border-radius:3px;
-      background-image: linear-gradient(to bottom right, #3e5ad6, rgb(0, 183, 255));
-      height: 150px;
-    }
-  
-    .topnav ul:after {
-      width:0px;
-      height:0px;
-      position:absolute;
-      top:0%;
-      left:16px;
-      content:'';
-      transform:translate(0%, -100%);
-      border-left:7px solid transparent;
-      border-right:7px solid transparent;
-      border-bottom:7px solid #3e5ad6;
-    }
-  
-    .topnav li {
-      margin:5px 0px 5px 39px;
-      float:none;
-      display:block;
-    }
-    .topnav li:last-child{
-      margin-right: 0px;
-    }
- 
-    .topnav a {
-      display:block;
-      margin:0px 0px 10px 0px ;
-      font-size: 14px;
-    }
-  
-    .topnav a:hover{
-      color: #fff;
-    }
-  
-     .topnav a.active {
-      color: #fff;
-      margin-left: 0px;
-      transform:none;
-    }
-  
-    
-    .toggle-nav {
-     
-      padding:5 px;
-      display:inline-block;
-      border-radius:3px;
-      background: transparent;
-      text-shadow:0px 1px 0px rgba(0,0,0,0.5);
-      color:#777;
-      font-size:20px;
-      transition:color linear 0.15s;
-    }
-  
-    .toggle-nav:hover, .toggle-nav.active {
-      text-decoration:none;
-      color:#66a992;
-    }
-  
-     a.toggle-nav{
-      display: block;
-      margin-left: 15px;
-      margin-top: 37px;
-      color:#fff ;
-      justify-self: flex-start;
-      align-self: center;
-      font-size: 29px;
-      grid-column-start: 1;
-      grid-column-end: 2;
-    }
-    a:-webkit-any-link {
-      
-      cursor: pointer;
-      text-decoration: none ;
-     }
-     .logo{
-      justify-self: center;
-      align-self: center;
-      height: 53px;
-      margin-top: 3px;
-    }
-     .search input[type=search].active{
-      display: none;
-    }
-    
-     .search input[type=search]{
-      width: 100%;;
-      position: fixed;;
-      top:39px;
-      left:0px;
-      border-right: 2px solid rgb(7, 152, 236);
-      align-self: flex-end;
-      border-radius: 0px 0px 0px 0px;
-    }
+@media screen and (max-width: 1024px) {
+   .detailcard {
+    margin: 20px auto 15px;
+    grid-template-columns: 30% auto;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  body {
+    background-color: #fff;
+  }
+
+  .headercontainer {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 0px 40px;
+    height: 40px;
+    padding: 0px;
+    position: fixed;
+    top: 0%;
+    margin-bottom: 30px;
+    z-index: 1;
+  }
 
 
-     .search  button{
-      color: #fff;
-      background:transparent ;
-      font-size: 27px;
-      align-self: center;
-      justify-self:flex-end;
-      pointer-events: auto;
-      margin-right: 6px;
-      margin-bottom: 2px;
-    }
-   
-    
-    .wrap{
-      width: auto;
-      margin-right: 5px;
-    }
-    #bodydetails{
-      display: grid;
-      margin: 40px 0px 0px 0px;
-      width: 100%;
-     
-     }
-     
-      .detailcover{
-        width:145px;
-        height:200px;
-        grid-row: span 4;
-        align-self: center;
-        box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.2), 0px 6px 20px 0px rgba(0,0,0,0.19);
-       }
-       .detailcard{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 47% auto;
-        grid-template-rows: auto;
-        height: 200px;
-        margin:20px 0px 15px 10px;
-        
-       }
-       .detailtitle{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 17px;
-        font-weight: bold;
-        text-decoration: none;
-        margin: 0px 10px 0px 10px;
-        color: #000000;
-       }
-       
-        p{
-           
-            margin:2px 10px 0px 10px;
-            font-size: 12px;
-            margin-block-end: 0px;
-        }
-        .movietrailer{
-            width:338px;
-            height:192px;
-            margin:10px 0px 15px 10px;
-        }
-        .break{
-            width: 94%;
-        }
-        .detailslabel{
-            font-size: 14px;
-        }
-        h2{
-            margin-left: 10px;
-            font-size:14px;
-        }
-        .detaildirector{
-            grid-column-start: 2;
-            grid-column-end: 2;
-            grid-row-start: 1;
-            grid-row-end: 1;
-            justify-self:flex-start ;
-            align-content: flex-start;
-           }
-           .detailgenre{
-            
-            align-self: flex-start;
-           }
-           .detailduration{
-           
-            align-self: flex-start;
-           }
-           .detailrelease{
-           
-            align-self: flex-start;
-           }
-           .titlebreak{
-               width:94%
-           }
-           .description{
-               margin-left: 10px;
-           }
-   }
+  .topnav {
+    position: relative;
+    display: inline-block;
+  }
+
+  .topnav ul.active {
+    display: none;
+  }
+
+  .topnav ul {
+    width: 200px;
+    position: fixed;
+    top: 31px;
+    left: 6px;
+    padding: 15px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom right, #3e5ad6, rgb(0, 183, 255));
+    height: 150px;
+  }
+
+  .topnav ul:after {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0%;
+    left: 16px;
+    content: '';
+    transform: translate(0%, -100%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #3e5ad6;
+  }
+
+  .topnav li {
+    margin: 5px 0px 5px 39px;
+    float: none;
+    display: block;
+  }
+
+  .topnav li:last-child {
+    margin-right: 0px;
+  }
+
+  .topnav a {
+    display: block;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .topnav a:hover {
+    color: #fff;
+  }
+
+  .topnav a.active {
+    color: #fff;
+    margin-left: 0px;
+    transform: none;
+  }
+
+
+  .toggle-nav {
+
+    padding: 5 px;
+    display: inline-block;
+    border-radius: 3px;
+    background: transparent;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+    color: #777;
+    font-size: 20px;
+    transition: color linear 0.15s;
+  }
+
+  .toggle-nav:hover,
+  .toggle-nav.active {
+    text-decoration: none;
+    color: #66a992;
+  }
+
+  a.toggle-nav {
+    display: block;
+    margin-left: 15px;
+    margin-top: 37px;
+    color: #fff;
+    justify-self: flex-start;
+    align-self: center;
+    font-size: 29px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  a:-webkit-any-link {
+
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .logo {
+    justify-self: center;
+    align-self: center;
+    height: 53px;
+    margin-top: 3px;
+  }
+
+  .search input[type=search].active {
+    display: none;
+  }
+
+  .search input[type=search] {
+    width: 100%;
+    position: fixed;
+    top: 39px;
+    left: 0px;
+    border-right: 2px solid rgb(7, 152, 236);
+    align-self: flex-end;
+    border-radius: 0px 0px 0px 0px;
+  }
+
+
+  .search button {
+    color: #fff;
+    background: transparent;
+    font-size: 27px;
+    align-self: center;
+    justify-self: flex-end;
+    pointer-events: auto;
+    margin-right: 6px;
+    margin-bottom: 2px;
+  }
+
+
+  .wrap {
+    width: auto;
+    margin-right: 5px;
+  }
+
+  #bodydetails {
+    display: grid;
+    margin: 40px 0px 0px 0px;
+    width: 100%;
+
+  }
+
+  .detailcard {
+    margin: 20px auto 15px;
+  }
+
+  .detailtitle {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0px 10px 0px 10px;
+    color: #000000;
+  }
+
+  p {
+    margin: 2px 10px 0px 10px;
+    margin-block-end: 0px;
+  }
+
+  .movietrailer {
+    margin: 10px 0px 15px 10px;
+  }
+
+  .break {
+    width: 94%;
+  }
+
+  h2 {
+    margin-left: 10px;
+  }
+
+  .detaildirector {
+    align-self: flex-start;
+  }
+
+  .detailgenre {
+
+    align-self: flex-start;
+  }
+
+  .detailduration {
+
+    align-self: flex-start;
+  }
+
+  .detailrelease {
+
+    align-self: flex-start;
+  }
+
+  .titlebreak {
+    width: 94%
+  }
+
+  .description {
+    margin-left: 10px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .detailcard {
+    grid-template-columns: 47% auto;
+    grid-template-rows: 80px 50px 50px 60px;
+  }
+}
