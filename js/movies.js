@@ -64,7 +64,6 @@ function makeAPIRequest(method, url) {
     req.onload = function () {
       data = JSON.parse(req.responseText);
       if (req.status >= 200 && req.status < 300) {
-        console.log("Request done succesfully");
         resolve(data);
       } else {
         reject(new Error(req.responseText));
@@ -142,11 +141,7 @@ function makeMovieElements(url) {
           "https://api.themoviedb.org/3/movie/" +
             movie.id +
             "/credits?api_key=71979c8dbee4788fbc86711e4e9106b4"
-        )
-          .then((response) => {
-            console.log(data);
-          })
-          .then((response) => {
+        ).then((response) => {
             const director = document.createElement("p");
             director.setAttribute("class", "moviedirector");
             director.textContent = "Director: ";
@@ -180,11 +175,7 @@ function makeMovieElements(url) {
           "https://api.themoviedb.org/3/movie/" +
             movie.id +
             "?api_key=71979c8dbee4788fbc86711e4e9106b4&language=en-US"
-        )
-          .then((response) => {
-            console.log(data);
-          })
-          .then((response) => {
+        )  .then((response) => {
             const durationGenreDiv = document.createElement("div");
             durationGenreDiv.setAttribute("class", "durationgenrediv");
 

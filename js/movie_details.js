@@ -20,10 +20,10 @@ function scrollFunction() {
 var movieid = window.location.search.substring(1);
 console.log(movieid);
 
-const detailbody = document.getElementById("bodydetails");
+const detailbody = document.getElementById("bodycontent");
 
 const importantdetails = document.createElement("div");
-importantdetails.setAttribute("class", "detailcard");
+importantdetails.classList.add("card", "detailcard")
 
 var data = " ";
 function makeAPIRequest(method, url) {
@@ -68,7 +68,7 @@ makeAPIRequest(
       "src",
       "https://image.tmdb.org/t/p/w500/" + data.poster_path
     );
-    movieCover.setAttribute("class", "detailcover");
+    movieCover.classList.add("cover", "detailcover");
     importantdetails.appendChild(movieCover);
 
     const genre = document.createElement("div");
@@ -161,12 +161,19 @@ makeAPIRequest(
     const dirvalue = document.createElement("p");
     var str = document.createElement("p");
 
+    let numberOfDirectors = 0;
     for (i = 0; i < data.crew.length - 1; i++) {
       if (data.crew[i].department == "Directing") {
         str.textContent += data.crew[i].name;
+        numberOfDirectors++;
+        if(numberOfDirectors === 3){
+          break;
+        }
         if (!(i == data.crew.length - 1)) {
           str.textContent += ", ";
         }
+        
+
       }
       dirvalue.textContent = str.textContent.slice(0, -2);
     }
@@ -208,11 +215,6 @@ makeAPIRequest(
     console.error(err);
   });
 
-const titlebreak = document.createElement("hr");
-titlebreak.setAttribute("class", "titlebreak");
-
-const cardbreak = document.createElement("hr");
-cardbreak.setAttribute("class", "break");
 
 const descriptionbreak = document.createElement("hr");
 descriptionbreak.setAttribute("class", "break");
@@ -221,9 +223,8 @@ const trailerbreak = document.createElement("hr");
 trailerbreak.setAttribute("class", "break");
 
 detailbody.appendChild(movieTitle);
-detailbody.appendChild(titlebreak);
+
 detailbody.appendChild(importantdetails);
-detailbody.appendChild(cardbreak);
 detailbody.appendChild(descriptionlabel);
 detailbody.appendChild(movieDescription);
 detailbody.appendChild(descriptionbreak);
