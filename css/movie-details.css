@@ -9,7 +9,7 @@ body {
   background-color: rgba(248, 248, 255, 0.925);
 }
 
-input{
+input {
   font-size: 15px;
 }
 
@@ -20,16 +20,16 @@ input{
 .detailcard {
   display: grid;
   grid-template-columns: 20% 80%;
-  grid-template-rows: 80px 80px 80px 80px;
+  grid-template-rows: auto auto auto auto;
   margin: 0 auto;
   padding: 20px 0px;
+  width: 100%;
 }
 
 .detailtitle {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
   text-decoration: none;
-  margin: 5px 0px 15px 20px;
   color: #000000;
 }
 
@@ -74,55 +74,32 @@ input{
 }
 
 .description {
-  margin: 22px 0px 25px 22px;
+  margin: 22px 0px 25px 0px;
 }
 
 h2 {
   font-weight: bold;
-  margin: 22px 0px 0px 22px;
+  margin: 22px 0px 0px 0px;
 }
 
 .movietrailer {
   width: 100%;
-  height: 40vh;
-  margin: 22px 0px 15px 22px;
+  height: 100%;
+  margin: 22px 0px 15px 0px;
+  position: absolute;
+}
+
+.trailer-container{
+  padding-bottom: 50%;
+  position: relative;
 }
 
 .break {
   border-style: ridge;
 }
 
-/* 
-     .castdiv{
-    display: grid;
-    grid-template-columns: 33% 33% 33% ;
-    grid-template-rows: 30% 30% 30%;
-    width:85%;
-    height:500px;
-   }  
-   .membercastdiv{
-    display: grid;
-    grid-template-columns: 40% auto;
-    grid-template-rows: 50% 50%;
-    width:16%;
-    height:121px;
-   } 
-   .profilepic{
-       width: 80px;
-       height: 120px;
-       grid-column-start: 1;
-       grid-column-end: 1;
-       grid-row: span2;
-   }
-   .membername{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-   }  */
-
 @media screen and (max-width: 1024px) {
-   .detailcard {
+  .detailcard {
     margin: 20px auto 15px;
     grid-template-columns: 30% auto;
   }
@@ -295,25 +272,21 @@ h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     text-decoration: none;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 0px;
     color: #000000;
   }
 
   p {
-    margin: 2px 10px 0px 10px;
+    margin: 2px 10px 0px 0px;
     margin-block-end: 0px;
   }
 
   .movietrailer {
-    margin: 10px 0px 15px 10px;
+    margin: 10px 0px 15px 0px;
   }
 
   .break {
-    width: 94%;
-  }
-
-  h2 {
-    margin-left: 10px;
+    width: 100%;
   }
 
   .detaildirector {
@@ -339,9 +312,6 @@ h2 {
     width: 94%
   }
 
-  .description {
-    margin-left: 10px;
-  }
 }
 
 
@@ -349,6 +319,5 @@ h2 {
 
   .detailcard {
     grid-template-columns: 47% auto;
-    grid-template-rows: 80px 50px 50px 60px;
   }
 }
