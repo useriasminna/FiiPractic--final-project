@@ -18,7 +18,6 @@ function scrollFunction() {
 }
 
 var movieid = window.location.search.substring(1);
-console.log(movieid);
 
 const detailbody = document.getElementById("bodycontent");
 
@@ -34,7 +33,6 @@ function makeAPIRequest(method, url) {
     req.onload = function () {
       data = JSON.parse(req.responseText);
       if (req.status >= 200 && req.status < 300) {
-        console.log("Request done succesfully");
         resolve(data);
       } else {
         reject(new Error(req.responseText));
@@ -56,7 +54,6 @@ makeAPIRequest(
     "?api_key=71979c8dbee4788fbc86711e4e9106b4&language=en-US"
 )
   .then((response) => {
-    console.log(data);
   })
   .then((response) => {
     movieTitle.setAttribute("class", "detailtitle");
@@ -148,7 +145,6 @@ makeAPIRequest(
     "/credits?api_key=71979c8dbee4788fbc86711e4e9106b4"
 )
   .then((response) => {
-    console.log(data);
   })
   .then((response) => {
     const director = document.createElement("div");
@@ -185,6 +181,8 @@ makeAPIRequest(
     console.error(err);
   });
 
+const trailerContainer = document.createElement("div");
+trailerContainer.classList.add('trailer-container')
 const trailer = document.createElement("iframe");
 
 const trailerlabel = document.createElement("h2");
@@ -195,11 +193,7 @@ makeAPIRequest(
   "https://api.themoviedb.org/3/movie/" +
     movieid +
     "/videos?api_key=71979c8dbee4788fbc86711e4e9106b4&language=en-US"
-)
-  .then((response) => {
-    console.log(data);
-  })
-  .then((response) => {
+).then((response) => {
     trailer.setAttribute("class", "movietrailer");
     for (i = 0; i < data.results.length; i++) {
       if (data.results[i].type == "Trailer") {
@@ -222,6 +216,8 @@ descriptionbreak.setAttribute("class", "break");
 const trailerbreak = document.createElement("hr");
 trailerbreak.setAttribute("class", "break");
 
+trailerContainer.appendChild(trailer);
+
 detailbody.appendChild(movieTitle);
 
 detailbody.appendChild(importantdetails);
@@ -229,6 +225,6 @@ detailbody.appendChild(descriptionlabel);
 detailbody.appendChild(movieDescription);
 detailbody.appendChild(descriptionbreak);
 detailbody.appendChild(trailerlabel);
-detailbody.appendChild(trailer);
+detailbody.appendChild(trailerContainer);
 detailbody.appendChild(trailerbreak);
 detailbody.appendChild(castdiv);
